@@ -1,0 +1,92 @@
+name: to_do_list
+description: "to do list project"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  smooth_page_indicator: ^1.2.0+3
+  go_router: ^14.2.1
+  provider: ^6.1.2
+  flutter_feather_icons: ^2.0.0+1
+  unicons: ^3.0.0
+  percent_indicator: ^4.2.3
+  sqflite: ^2.4.0
+  intl: ^0.20.0
+  path: ^1.9.0
+  flutter_local_notifications: ^18.0.1
+  flutter_timezone: ^3.0.1
+  timezone: ^0.10.0
+  workmanager: ^0.5.2
+  flutter_background: ^1.3.0+1
+  animated_line_through: ^1.0.4
+  animations: ^2.0.11
+  permission_handler: ^11.3.1
+  app_settings: ^5.1.1
+  quick_actions: ^1.0.8
+  numberpicker: ^2.1.2
+  flutter_svg: ^2.0.16
+  font_awesome_flutter: ^10.8.0
+  popover: ^0.3.1
+  sqflite_common_ffi: ^2.3.4+4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/onBoard/
+
+  fonts:
+    - family: LexendDeca
+      fonts:
+        - asset: assets/fonts/LexendDeca-Regular.ttf
+        - asset: assets/fonts/LexendDeca-SemiBold.ttf
+          weight: 600
+    - family: inter
+      fonts:
+        - asset: assets/fonts/inter.ttf
+          weight: 600
+
+    - family: Inbox
+      fonts:
+        - asset: assets/fonts/inboxicon.ttf
+
+    - family: Pomodoro
+      fonts:
+        - asset: assets/fonts/pI2.ttf
+
+    - family: Settings
+      fonts:
+        - asset: assets/fonts/SettingsIcon.ttf
+
+    - family: Archieve
+      fonts:
+        - asset: assets/fonts/ArchieveIcon.ttf
+
+    - family: Today
+      fonts:
+        - asset: assets/fonts/TodayIcon.ttf
+
+    - family: PomodoroCompleted
+      fonts:
+        - asset: assets/fonts/PomodoroCompletedIcon.ttf
+
+    - family: EditPomodoro
+      fonts:
+        - asset: assets/fonts/EditPomodoroIcon.ttf
+    - family: Clist
+      fonts:
+        - asset: assets/fonts/ClistIcon.ttf
