@@ -1,7 +1,6 @@
 import 'package:to_do_list/models/widgets/NavigationMenu.dart';
 import 'package:to_do_list/pages/CustomePage.dart';
 import 'package:to_do_list/pages/EditPomodoro.dart';
-import 'package:to_do_list/pages/QuickActionAdd.dart';
 import 'package:to_do_list/pages/Settings.dart';
 import 'package:to_do_list/pages/Theme.dart';
 import 'package:to_do_list/services/animations/HomeAnimations.dart';
@@ -386,10 +385,6 @@ final _router = GoRouter(
         );
       },
     ),
-    GoRoute(
-      name: 'QuickActionsAdd',
-      path: '/QuickActionsAdd',
-      builder: (context, state) => const QuickActionsAdd(),
-    ),
+  
   ],
 );

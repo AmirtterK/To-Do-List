@@ -6,7 +6,6 @@ import 'package:to_do_list/models/widgets/TaskTile.dart';
 import 'package:to_do_list/models/classes/taskClass.dart';
 import 'package:to_do_list/services/database/AppData.dart';
 import 'package:to_do_list/services/database/DataBase.dart';
-import 'package:to_do_list/services/quickActions/quickActions.dart';
 import 'package:flutter/material.dart';
 
 class Customepage extends StatefulWidget {
@@ -18,7 +17,6 @@ class Customepage extends StatefulWidget {
 }
 
 class _CustomepageState extends State<Customepage> with WidgetsBindingObserver {
-  QuickActionsMenu quickActions = QuickActionsMenu();
 
   late final String _Pagetitle;
   late ToDo RestoreTask;
@@ -72,7 +70,6 @@ class _CustomepageState extends State<Customepage> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     _Pagetitle = widget.location;
-    quickActions.init(context);
     WidgetsBinding.instance.addObserver(this);
   }
 
