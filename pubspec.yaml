@@ -30,6 +30,7 @@ dependencies:
   animations: ^2.0.11
   permission_handler: ^12.0.1
   app_settings: ^6.1.1
+  quick_actions: ^1.0.8
   numberpicker: ^2.1.2
   flutter_svg: ^2.0.16
   font_awesome_flutter: ^10.8.0

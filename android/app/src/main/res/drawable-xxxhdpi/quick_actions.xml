@@ -3,4 +3,3 @@
     <item android:drawable="@drawable/addtask" />
     <item android:drawable="@drawable/searchtask" />
 </layer-list>
-q
