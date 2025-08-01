@@ -13,7 +13,7 @@ class ThemePage extends StatefulWidget {
 
 class _ThemePageState extends State<ThemePage> {
   int _selectedIndex = -1;
-  _adjustThemeList(int index) {
+  void _adjustThemeList(int index) {
     setState(
       () {
         _selectedIndex =

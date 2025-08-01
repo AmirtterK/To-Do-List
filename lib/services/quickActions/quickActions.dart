@@ -6,7 +6,7 @@ import 'package:to_do_list/services/database/AppData.dart';
 class QuickActionsMenu {
   QuickActions quickActionss = const QuickActions();
 
-  init(BuildContext context) async {
+  Future<void> init(BuildContext context) async {
     if (!Device.desktopPlatform) {
       quickActionss.initialize(
         (String shortCut) {

@@ -71,8 +71,6 @@ class notificationsService {
     await flutterLocalNotificationsPlugin.zonedSchedule(id, title, body,
         tz.TZDateTime.from(reminder, tz.local), PlatformChannelSpecifics,
         androidScheduleMode: AndroidScheduleMode.alarmClock,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
         payload: null,
         matchDateTimeComponents: DateTimeComponents.dateAndTime);
   }
@@ -98,7 +96,7 @@ class notificationsService {
 }
 
 Future<void> setCompletedTask(NotificationResponse notificationResponse) async {
-  List<Map<String, dynamic>> response = await sqlDB
+  List<Map> response = await sqlDB
       .search('InboxTodos', 'reminderId=?', [notificationResponse.id]);
   if (response.isNotEmpty) {
     if (1 ==

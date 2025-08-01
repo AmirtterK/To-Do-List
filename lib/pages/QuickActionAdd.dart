@@ -30,22 +30,25 @@ class _QuickActionsAddState extends State<QuickActionsAdd> {
   }
 }
 
-void showQuickActionDialog(context) async {
+void showQuickActionDialog(BuildContext context) async {
   await fetchReminerId('maindata');
-  ToDo? new_task = await displayNewTaskDialog(context);
+  if(context.mounted){
 
-  await validate_newTaskAdded(new_task, -1);
+  ToDo? newTask = await displayNewTaskDialog(context);
+  await validate_newTaskAdded(newTask, -1);
+  }
+
   SystemNavigator.pop();
 }
 
-Future<void> validate_newTaskAdded(ToDo? new_task, int index) async {
-  if (new_task != null) {
-    await insertInDb('Inbox', new_task);
+Future<void> validate_newTaskAdded(ToDo? newTask, int index) async {
+  if (newTask != null) {
+    await insertInDb('Inbox', newTask);
 
     if (index == -1) {
-      MainData.inbox_tasks_list.add(new_task);
+      MainData.inbox_tasks_list.add(newTask);
     } else {
-      addDraggedTask(index, new_task);
+      addDraggedTask(index, newTask);
     }
     UpdateInboxProgress();
 
@@ -64,6 +67,6 @@ Future<void> validate_newTaskAdded(ToDo? new_task, int index) async {
   }
 }
 
-void addDraggedTask(index, ToDo new_task) {
-  MainData.inbox_tasks_list.insert(index, new_task);
+void addDraggedTask(int index, ToDo newTask) {
+  MainData.inbox_tasks_list.insert(index, newTask);
 }

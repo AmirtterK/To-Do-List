@@ -25,7 +25,7 @@ class _CustomepageState extends State<Customepage> with WidgetsBindingObserver {
   bool isDragged = false;
   bool hover = false;
 
-  Future<void> addDraggedTask(index, ToDo new_task) async {
+  Future<void> addDraggedTask(int index, ToDo new_task) async {
     setState(
       () {
         MainData.selectedList.insert(index, new_task);

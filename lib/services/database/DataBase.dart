@@ -22,7 +22,7 @@ class SqlDB {
     }
   }
 
-  initialDB() async {
+  Future<Database> initialDB() async {
     String databasePath = await getDatabasesPath();
     String path = join(databasePath, 'SwiftList.db');
     Database mydb = await openDatabase(path,
@@ -30,10 +30,10 @@ class SqlDB {
     return mydb;
   }
 
-  _onUpgrade(Database db, int oldversion, int newversion) {
+  void _onUpgrade(Database db, int oldversion, int newversion) {
   }
 
-  _onCreate(Database db, int version) async {
+  Future<void> _onCreate(Database db, int version) async {
     await db.execute('''
     CREATE TABLE "InboxTodos"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT ,
@@ -140,26 +140,26 @@ class SqlDB {
 ''');
   }
 
-  readData(String table) async {
+  Future<List<Map>> readData(String table) async {
     Database? mydb = await db;
     List<Map> response = await mydb!.query(table);
     return response;
   }
 
-  search(String table, String whereVal, List val) async {
+  Future<List<Map>> search(String table, String whereVal, List val) async {
     Database? mydb = await db;
     List<Map> response =
         await mydb!.query(table, where: whereVal, whereArgs: val);
     return response;
   }
 
-  insert(String table, Map<String, Object> values) async {
+  Future<int> insert(String table, Map<String, Object> values) async {
     Database? mydb = await db;
     int response = await mydb!.insert(table, values);
     return response;
   }
 
-  update(String table, Map<String, Object> values, String whereVal,
+  Future<int> update(String table, Map<String, Object> values, String whereVal,
       List val) async {
     Database? mydb = await db;
     int response =
@@ -167,13 +167,13 @@ class SqlDB {
     return response;
   }
 
-  delete(String table, String whereVal, List val) async {
+  Future<int> delete(String table, String whereVal, List val) async {
     Database? mydb = await db;
     int response = await mydb!.delete(table, where: whereVal, whereArgs: val);
     return response;
   }
 
-  deleteAll(String table) async {
+  Future<int> deleteAll(String table) async {
     String tableName = '${table}Todos';
     Database? mydb = await db;
     int response = await mydb!.delete(tableName);
@@ -181,14 +181,14 @@ class SqlDB {
     return response;
   }
 
-  deleteMain(String table) async {
+  Future<int> deleteMain(String table) async {
     Database? mydb = await db;
     int response = await mydb!.delete(table);
     await mydb.execute('DELETE FROM sqlite_sequence WHERE name = "$table"');
     return response;
   }
 
-  deleteTable(String tableName) async {
+  Future<void> deleteTable(String tableName) async {
     Database? mydb = await db;
     await mydb!.execute('DROP TABLE IF EXISTS $tableName');
   }

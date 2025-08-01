@@ -329,7 +329,7 @@ Future<bool> isAlarmAllowed() async {
 
 int toInt(bool completed) => completed ? 1 : 0;
 
-Future<ToDo?> displayNewTaskDialog(context) {
+Future<ToDo?> displayNewTaskDialog(BuildContext context) {
   return showGeneralDialog(
     barrierDismissible: true,
     barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
@@ -397,7 +397,7 @@ Future<void> resetAllarm() async {
   }
 }
 
-Future<Customlist?> displayNewListDialog(context) {
+Future<Customlist?> displayNewListDialog(BuildContext context) {
   return showGeneralDialog(
     barrierDismissible: true,
     barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,

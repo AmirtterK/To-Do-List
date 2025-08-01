@@ -21,7 +21,7 @@ class themeCard extends StatefulWidget {
 }
 
 class _themeCardState extends State<themeCard> {
-  get async => null;
+  Null get async => null;
 
   @override
   Widget build(BuildContext context) {
