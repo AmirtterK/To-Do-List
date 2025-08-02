@@ -72,7 +72,7 @@ class _HomeMenuState extends State<HomeMenu> with WidgetsBindingObserver {
           children: [
             ListView.builder(
               key: ValueKey(_menuUpdated),
-              padding: EdgeInsets.only(top: Device.pixelRatio * 2),
+              padding: EdgeInsets.only(top: 10),
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: MainData.MenuItems.length,
@@ -89,14 +89,14 @@ class _HomeMenuState extends State<HomeMenu> with WidgetsBindingObserver {
                             padding: EdgeInsets.only(
                                 left: 15,
                                 bottom: 7,
-                                top: Device.pixelRatio * 3),
+                                top: 8),
                             child: Text(
                               "General",
                               style: TextStyle(
                                   color: Theme.of(context)
                                       .colorScheme
                                       .secondaryFixed,
-                                  fontSize: Device.pixelRatio * 6,
+                                  fontSize: 19,
                                   fontWeight: Device.menuFont),
                             ),
                           ),
@@ -116,14 +116,14 @@ class _HomeMenuState extends State<HomeMenu> with WidgetsBindingObserver {
                                 padding: EdgeInsets.only(
                                     left: 15,
                                     bottom: 7,
-                                    top: Device.pixelRatio * 3),
+                                    top: 8),
                                 child: Text(
                                   "Other",
                                   style: TextStyle(
                                       color: Theme.of(context)
                                           .colorScheme
                                           .secondaryFixed,
-                                      fontSize: 18,
+                                      fontSize: 19,
                                       fontWeight: Device.menuFont),
                                 ),
                               ),
@@ -143,7 +143,7 @@ class _HomeMenuState extends State<HomeMenu> with WidgetsBindingObserver {
                                   })),
                         },
                         leading: Padding(
-                          padding: EdgeInsets.only(left: Device.pixelRatio * 3),
+                          padding: EdgeInsets.only(left: 12),
                           child: Transform.scale(
                             scale: index == 0 ? 1.14 : 1,
                             child: IconTheme(
@@ -200,7 +200,7 @@ class _HomeMenuState extends State<HomeMenu> with WidgetsBindingObserver {
                       }
                   },
                   leading: Padding(
-                    padding: EdgeInsets.only(left: Device.pixelRatio * 3),
+                    padding: EdgeInsets.only(left: 12),
                     child: IconTheme(
                       data: IconThemeData(
                         color: Theme.of(context).colorScheme.secondaryFixed,

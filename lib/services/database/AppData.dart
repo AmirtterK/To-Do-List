@@ -40,7 +40,7 @@ class MainData {
             Text(
               'Inbox',
               style: TextStyle(
-                fontSize: Device.pixelRatio * 6,
+                fontSize: 18,
                 fontWeight: Device.menuFont,
               ),
             ),
@@ -73,7 +73,7 @@ class MainData {
             Text(
               'Today',
               style: TextStyle(
-                fontSize: Device.pixelRatio * 6,
+                fontSize: 18,
                 fontWeight: Device.menuFont,
               ),
             ),
@@ -103,7 +103,7 @@ class MainData {
         Text(
           'Pomodoro',
           style: TextStyle(
-            fontSize: Device.pixelRatio * 6,
+            fontSize: 18,
             fontWeight: Device.menuFont,
           ),
         ),
@@ -116,7 +116,7 @@ class MainData {
         Text(
           'Archive',
           style: TextStyle(
-            fontSize: Device.pixelRatio * 6,
+            fontSize: 18,
             fontWeight: Device.menuFont,
           ),
         ),
@@ -129,7 +129,7 @@ class MainData {
         Text(
           'Settings',
           style: TextStyle(
-            fontSize: Device.pixelRatio * 6,
+            fontSize: 18,
             fontWeight: Device.menuFont,
           ),
         ),
@@ -229,7 +229,7 @@ Future<void> updateInboxProgressIndicators() async {
       Text(
         'Inbox',
         style: TextStyle(
-          fontSize: Device.pixelRatio * 6,
+          fontSize: 18,
           fontWeight: Device.menuFont,
         ),
       ),
@@ -259,7 +259,7 @@ Future<void> updateTodayProgressIndicators() async {
       Text(
         'Today',
         style: TextStyle(
-          fontSize: Device.pixelRatio * 6,
+          fontSize: 18,
           fontWeight: Device.menuFont,
         ),
       ),
@@ -463,7 +463,7 @@ Future<void> ResetData() async {
             Text(
               'Inbox',
               style: TextStyle(
-                fontSize: Device.pixelRatio * 6,
+                fontSize: 18,
                 fontWeight: Device.menuFont,
               ),
             ),
@@ -496,7 +496,7 @@ Future<void> ResetData() async {
             Text(
               'Today',
               style: TextStyle(
-                fontSize: Device.pixelRatio * 6,
+                fontSize: 18,
                 fontWeight: Device.menuFont,
               ),
             ),
@@ -526,7 +526,7 @@ Future<void> ResetData() async {
         Text(
           'Pomodoro',
           style: TextStyle(
-            fontSize: Device.pixelRatio * 6,
+            fontSize: 18,
             fontWeight: Device.menuFont,
           ),
         ),
@@ -539,7 +539,7 @@ Future<void> ResetData() async {
         Text(
           'Archive',
           style: TextStyle(
-            fontSize: Device.pixelRatio * 6,
+            fontSize: 18,
             fontWeight: Device.menuFont,
           ),
         ),
@@ -552,7 +552,7 @@ Future<void> ResetData() async {
         Text(
           'Settings',
           style: TextStyle(
-            fontSize: Device.pixelRatio * 6,
+            fontSize: 18,
             fontWeight: Device.menuFont,
           ),
         ),

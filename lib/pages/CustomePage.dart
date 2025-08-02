@@ -333,7 +333,7 @@ class _CustomepageState extends State<Customepage> with WidgetsBindingObserver {
             elevation: 3,
             child: Icon(
               CupertinoIcons.add,
-              size: Device.pixelRatio * 12,
+              size: 36,
             ),
           ),
           child: Padding(
@@ -350,7 +350,7 @@ class _CustomepageState extends State<Customepage> with WidgetsBindingObserver {
               elevation: 3,
               child: Icon(
                 CupertinoIcons.add,
-                size: Device.pixelRatio * 12,
+                size: 36,
               ),
             ),
           ),

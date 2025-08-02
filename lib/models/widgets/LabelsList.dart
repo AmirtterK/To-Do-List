@@ -29,7 +29,7 @@ class _LabelslistState extends State<Labelslist> {
                 child: Container(
                   width: (Device.screenWidth / 5.5).round() * 1,
                   padding: EdgeInsets.symmetric(
-                    vertical: Device.pixelRatio * 3,
+                    vertical: 12,
                   ),
                   alignment: Alignment.center,
                   child: Text(

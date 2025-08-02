@@ -44,7 +44,7 @@ class _ThemePageState extends State<ThemePage> {
       body: Column(
         children: [
           SizedBox(
-            height: Device.pixelRatio * 4,
+            height: 16,
           ),
           Expanded(
             child: Padding(

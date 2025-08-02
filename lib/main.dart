@@ -15,7 +15,7 @@ import 'package:go_router/go_router.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
-import 'dart:io'; 
+import 'dart:io';
 
 import 'package:to_do_list/pages/OnBoard.dart';
 import 'package:to_do_list/pages/Archive.dart';
@@ -23,15 +23,26 @@ import 'package:to_do_list/pages/HomeMenu.dart';
 import 'package:to_do_list/pages/Pomodoro.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.manual,
+    overlays: [SystemUiOverlay.top],
+  );
   if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
     Device.desktopPlatform = true;
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
     Device.menuFont = FontWeight.w300;
   }
+  if (!Device.desktopPlatform) {
+    await initializeWorkmanager();
+  }
 
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+  initializeServices();
+
   await fetchMainData(
     'MainData',
   );
@@ -66,6 +77,10 @@ Future<void> setAllarm() async {
       'MainData', {'isAllarmOn': toInt(MainData.isAllarmOn)}, 'id=?', [1]);
 }
 
+Future<void> initializeServices() async {
+  await setAllarm();
+}
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -77,14 +92,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    initializeServices();
-  }
-
-  Future<void> initializeServices() async {
-    if (!Device.desktopPlatform) {
-      await WorkManagerService().init();
-    }
-    await setAllarm();
   }
 
   @override
@@ -385,6 +392,5 @@ final _router = GoRouter(
         );
       },
     ),
-  
   ],
 );

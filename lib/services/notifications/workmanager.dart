@@ -13,10 +13,6 @@ class WorkManagerService {
     await notificationsService.flutterLocalNotificationsPlugin
         .cancel(int.parse(id));
   }
-
-  Future<void> init() async {
-    await Workmanager().initialize(callBackDispatcher);
-  }
 }
 
 @pragma('vm:entry-point')
@@ -37,4 +33,14 @@ void callBackDispatcher() {
       return Future.value(true);
     },
   );
+}
+
+Future<void> initializeWorkmanager() async {
+  try {
+    await Future.delayed(const Duration(milliseconds: 100));
+
+    await Workmanager().initialize(
+      callBackDispatcher,
+    );
+  } catch (e) {}
 }

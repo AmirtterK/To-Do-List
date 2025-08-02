@@ -67,7 +67,7 @@ class _OnBoardState extends State<OnBoard> {
                           ),
                           icon: Icon(
                             Icons.arrow_forward_ios_rounded,
-                            size: Device.pixelRatio * 10,
+                            size: 36,
                             color: Theme.of(context).colorScheme.secondaryFixed,
                           ),
                         ),

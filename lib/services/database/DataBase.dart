@@ -258,7 +258,7 @@ Future<void> fetchLists() async {
           Text(
             Clist.ListName.replaceAll('_', ' ').replaceAll('dotmark', '.'),
             style: TextStyle(
-              fontSize: Device.pixelRatio * 6,
+              fontSize: 18,
               fontWeight: Device.menuFont,
             ),
           ),

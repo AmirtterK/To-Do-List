@@ -71,7 +71,7 @@ class _TaskTileState extends State<TaskTile> {
       contentPadding: const EdgeInsets.only(left: 17),
       key: const ObjectKey(ListTile),
       title: Padding(
-        padding: EdgeInsets.only(right: Device.pixelRatio * 8),
+        padding: EdgeInsets.only(right: 32),
         child: Row(
           children: [
             Container(
@@ -150,8 +150,7 @@ class _TaskTileState extends State<TaskTile> {
       ),
       subtitle: (widget.task.description.isNotEmpty)
           ? Padding(
-              padding: EdgeInsets.only(
-                  left: Device.pixelRatio * 15, right: Device.pixelRatio * 20),
+              padding: EdgeInsets.only(left: 42, right: 60),
               child: Text(
                 widget.task.description,
                 style: TextStyle(

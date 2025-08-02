@@ -64,7 +64,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
         : Scaffold(
             appBar: Device.desktopPlatform ? null : Appbar(title: "Settings"),
             body: Padding(
-              padding: EdgeInsets.only(top: Device.pixelRatio * 2),
+              padding: EdgeInsets.only(top:8),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -72,15 +72,15 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(
-                        left: Device.pixelRatio * 5,
-                        bottom: Device.pixelRatio * 3,
-                        top: Device.pixelRatio * 3,
+                        left: 20,
+                        bottom: 16,
+                        top: 8,
                       ),
                       child: Text(
                         "General",
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.secondaryFixed,
-                          fontSize: 18,
+                          fontSize: 19,
                         ),
                       ),
                     ),
@@ -108,7 +108,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                       await resetAllarm()
                     },
                     leading: Padding(
-                      padding: EdgeInsets.only(left: Device.pixelRatio * 3),
+                      padding: EdgeInsets.only(left: 16),
                       child: Transform.scale(
                           scale: 1.137,
                           child: FaIcon(
@@ -119,7 +119,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     title: Text(
                       "Notifications",
                       style: TextStyle(
-                        fontSize: Device.pixelRatio * 6,
+                        fontSize: 18,
                         fontWeight: Device.menuFont,
                       ),
                     ),
@@ -156,7 +156,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                           [1])
                     },
                     leading: Padding(
-                      padding: EdgeInsets.only(left: Device.pixelRatio * 3),
+                      padding: EdgeInsets.only(left: 16),
                       child: Transform.scale(
                           scale: 1.137,
                           child: Icon(
@@ -167,7 +167,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     title: Text(
                       "Vibration",
                       style: TextStyle(
-                        fontSize: Device.pixelRatio * 6,
+                        fontSize: 18,
                         fontWeight: Device.menuFont,
                       ),
                     ),
@@ -194,14 +194,14 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(
-                          left: Device.pixelRatio * 5,
-                          bottom: Device.pixelRatio * 3,
-                          top: Device.pixelRatio * 3),
+                          left: 16,
+                          bottom: 16,
+                          top: 8),
                       child: Text(
                         "Personalization",
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.secondaryFixed,
-                          fontSize: 18,
+                          fontSize: 19,
                         ),
                       ),
                     ),
@@ -216,7 +216,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     },
                     leading: Padding(
                       padding: EdgeInsets.only(
-                        left: Device.pixelRatio * 3,
+                        left: 16,
                       ),
                       child: Transform.scale(
                         scale: 1.137,
@@ -229,12 +229,12 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     title: Text(
                       "Theme",
                       style: TextStyle(
-                        fontSize: Device.pixelRatio * 6,
+                        fontSize: 18,
                         fontWeight: Device.menuFont,
                       ),
                     ),
                     subtitle: Padding(
-                      padding: EdgeInsets.only(left: Device.pixelRatio * 2),
+                      padding: EdgeInsets.only(left:8),
                       child: Text(
                         MainData.selectedTheme,
                         style: TextStyle(
@@ -252,14 +252,14 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(
-                          left: Device.pixelRatio * 5,
-                          bottom: Device.pixelRatio * 3,
-                          top: Device.pixelRatio * 3),
+                          left: 16,
+                          bottom: 16,
+                          top: 8),
                       child: Text(
                         "More",
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.secondaryFixed,
-                          fontSize: 18,
+                          fontSize: 19,
                         ),
                       ),
                     ),
@@ -270,7 +270,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     },
                     leading: Padding(
                       padding: EdgeInsets.only(
-                        left: Device.pixelRatio * 3,
+                        left: 16,
                       ),
                       child: Transform.scale(
                         scale: 1.137,
@@ -283,7 +283,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     title: Text(
                       "About",
                       style: TextStyle(
-                        fontSize: Device.pixelRatio * 6,
+                        fontSize: 18,
                         fontWeight: Device.menuFont,
                       ),
                     ),
@@ -292,7 +292,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     onTap: () => {},
                     leading: Padding(
                       padding: EdgeInsets.only(
-                        left: Device.pixelRatio * 3,
+                        left: 16,
                       ),
                       child: Transform.scale(
                         scale: 1.137,
@@ -305,12 +305,12 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     title: Text(
                       "Version",
                       style: TextStyle(
-                        fontSize: Device.pixelRatio * 6,
+                        fontSize: 18,
                         fontWeight: Device.menuFont,
                       ),
                     ),
                     subtitle: Padding(
-                      padding: EdgeInsets.only(left: Device.pixelRatio * 2),
+                      padding: EdgeInsets.only(left: 8),
                       child: Text(
                         "1.0",
                         style: TextStyle(
@@ -325,7 +325,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     },
                     leading: Padding(
                       padding: EdgeInsets.only(
-                        left: Device.pixelRatio * 3,
+                        left: 16,
                       ),
                       child: FaIcon(
                         FontAwesomeIcons.arrowRotateRight,
@@ -335,7 +335,7 @@ class _SettingsState extends State<Settings> with WidgetsBindingObserver {
                     title: Text(
                       "Reset Data",
                       style: TextStyle(
-                        fontSize: Device.pixelRatio * 6,
+                        fontSize: 18,
                         fontWeight: Device.menuFont,
                       ),
                     ),
@@ -399,7 +399,7 @@ Future<void> aboutAppDialog(BuildContext context) async {
                       },
                       child: Text(
                         "Close",
-                        style: TextStyle(fontSize: Device.pixelRatio * 5),
+                        style: TextStyle(fontSize: 16),
                       ),
                     ),
                     SizedBox(

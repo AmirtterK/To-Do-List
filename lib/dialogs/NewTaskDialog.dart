@@ -66,7 +66,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                        right: Device.pixelRatio*1, top: Device.pixelRatio*1),
+                        right: 4, top: 4),
                     child: SizedBox(
                       width: 30,
                       height: 30,
@@ -108,7 +108,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                       left: 20,
                       bottom: 3,
                       top: 0,
-                      right: Device.pixelRatio * 7),
+                      right: 20),
                   border: InputBorder.none,
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
@@ -130,7 +130,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                       fontWeight: FontWeight.w400),
                   isDense: true,
                   contentPadding: EdgeInsets.only(
-                      left: 26, top: 2, right: Device.pixelRatio * 17),
+                      left: 26, top: 2, right: 40),
                   border: InputBorder.none,
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
@@ -141,9 +141,9 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: Device.pixelRatio * 3,
-                  top: Device.pixelRatio   *1,
-                  bottom: Device.pixelRatio*1,
+                  left: 12,
+                  top: 4,
+                  bottom: 4,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -163,8 +163,8 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                           },
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                              horizontal: Device.pixelRatio * 4,
-                              vertical: Device.pixelRatio*1,
+                              horizontal: 16,
+                              vertical: 4,
                             ),
                             child: Text(
                                 "${reminder1.hour.toString().padLeft(2, "0")}:${reminder1.minute.toString().padLeft(2, "0")}",
@@ -172,7 +172,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                                   color: Theme.of(context)
                                       .colorScheme
                                       .secondaryFixed,
-                                  fontSize: Device.pixelRatio * 5, fontWeight: Device.menuFont),
+                                  fontSize: 16, fontWeight: Device.menuFont),
                             ),
                           ),
                         ),
@@ -191,8 +191,8 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                           },
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                              horizontal: Device.pixelRatio * 4,
-                              vertical: Device.pixelRatio*1,
+                              horizontal: 16,
+                              vertical: 4,
                             ),
                             child: Text(
                               MainData.flag,
@@ -200,7 +200,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                                   color: Theme.of(context)
                                       .colorScheme
                                       .secondaryFixed, fontWeight: Device.menuFont,
-                                  fontSize: Device.pixelRatio * 5),
+                                  fontSize: 16),
                             ),
                           ),
                         ),
@@ -209,7 +209,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                 ),
               ),
               SizedBox(
-                height: Device.pixelRatio * 13,
+                height: 40,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
@@ -249,11 +249,11 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                           children: [
                             Icon(
                               Icons.access_alarm_rounded,
-                              size: Device.pixelRatio * 6,
+                              size: 18,
                             ),
                             Text(
                               ' Reminder',
-                              style: TextStyle(fontSize: Device.pixelRatio * 5),
+                              style: TextStyle(fontSize: 16),
                             ),
                           ],
                         ),
@@ -288,13 +288,13 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                                 angle: pi * 0.25,
                                 child: Icon(
                                   Icons.label,
-                                  size: Device.pixelRatio * 6,
+                                  size: 18,
                                 ),
                               ),
                               Text(
                                 ' Label',
                                 style:
-                                    TextStyle(fontSize: Device.pixelRatio * 5),
+                                    TextStyle(fontSize: 16),
                               ),
                             ],
                           ),

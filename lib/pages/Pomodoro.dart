@@ -99,7 +99,7 @@ class PomodoroState extends State<Pomodoro> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         SizedBox(
-                          width: Device.pixelRatio * 1,
+                          width: 4,
                         ),
                         IconButton(
                           onPressed: () async {
@@ -113,7 +113,7 @@ class PomodoroState extends State<Pomodoro> {
                           icon: Icon(
                             CustomIcons.editPomodoro,
                             color: const Color.fromARGB(255, 255, 255, 255),
-                            size: Device.pixelRatio * 9,
+                            size: 32,
                           ),
                         ),
                       ],
@@ -151,7 +151,7 @@ class PomodoroState extends State<Pomodoro> {
                             PomodoroData.timerName[PomodoroData.status ~/ 2],
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: Device.pixelRatio * 8,
+                                fontSize: 32,
                                 fontWeight: Device.menuFont),
                           )
                         ],
@@ -163,19 +163,19 @@ class PomodoroState extends State<Pomodoro> {
                     children: List.generate(PomodoroData.sets, (index) {
                       return Padding(
                         padding: EdgeInsets.symmetric(
-                            horizontal: Device.pixelRatio * 1),
+                            horizontal: 4),
                         child: (PomodoroData.completedSets > index)
                             ? Icon(
                                 CustomIcons.pomodoroCompleted,
                                 color: Theme.of(context)
                                     .colorScheme
                                     .secondaryFixed,
-                                size: Device.pixelRatio * 10,
+                                size: 40,
                               )
                             : Icon(
                                 CustomIcons.pomodoro,
                                 color: Colors.white,
-                                size: Device.pixelRatio * 10,
+                                size: 40,
                               ),
                       );
                     }),
@@ -227,7 +227,7 @@ class PomodoroState extends State<Pomodoro> {
                         PomodoroData.isRunning ? "Pause" : "Start",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: Device.pixelRatio * 8,
+                            fontSize: 32,
                             fontWeight: Device.menuFont),
                       ),
                     ),
@@ -248,12 +248,12 @@ class PomodoroState extends State<Pomodoro> {
                       setState(() {});
                     },
                     child: Padding(
-                      padding: EdgeInsets.only(bottom: Device.pixelRatio * 8),
+                      padding: EdgeInsets.only(bottom: 32),
                       child: Text(
                         "Reset",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: Device.pixelRatio * 8,
+                            fontSize: 32,
                             fontWeight: Device.menuFont),
                       ),
                     ),

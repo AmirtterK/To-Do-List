@@ -59,7 +59,7 @@ class _EditpomodoroState extends State<Editpomodoro> {
                 (index) {
                   return Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: Device.pixelRatio * 2),
+                        EdgeInsets.symmetric(horizontal: 8),
                     child: InkWell(
                       borderRadius: BorderRadius.circular(14),
                       onTap: () async {
@@ -76,12 +76,12 @@ class _EditpomodoroState extends State<Editpomodoro> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: Device.pixelRatio * 4,
+                              height: 16,
                             ),
                             Text(
                               PomodoroData.endTimer[index * 2].toString(),
                               style: TextStyle(
-                                  fontSize: Device.pixelRatio * 13,
+                                  fontSize: 40,
                                   color:
                                       const Color.fromARGB(255, 255, 255, 255),
                                   fontWeight: Device.menuFont),
@@ -91,7 +91,7 @@ class _EditpomodoroState extends State<Editpomodoro> {
                               style: TextStyle(
                                   color:
                                       const Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: Device.pixelRatio * 5,
+                                  fontSize: 12,
                                   fontWeight: Device.menuFont),
                             ),
                           ],
@@ -107,8 +107,8 @@ class _EditpomodoroState extends State<Editpomodoro> {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: Device.pixelRatio * 2,
-                    vertical: Device.pixelRatio * 4,
+                    horizontal: 8,
+                    vertical: 12,
                   ),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(14),
@@ -127,19 +127,19 @@ class _EditpomodoroState extends State<Editpomodoro> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: Device.pixelRatio * 4,
+                            height: 12,
                           ),
                           Text(
                             PomodoroData.sets.toString(),
                             style: TextStyle(
-                                fontSize: Device.pixelRatio * 13,
+                                fontSize: 40,
                                 color: const Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: Device.menuFont),
                           ),
                           Text(
                             "POMODOROS",
                             style: TextStyle(
-                                fontSize: Device.pixelRatio * 4,
+                                fontSize: 12,
                                 color: const Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: Device.menuFont),
                             textAlign: TextAlign.center,
@@ -150,9 +150,7 @@ class _EditpomodoroState extends State<Editpomodoro> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: Device.pixelRatio * 2,
-                      vertical: Device.pixelRatio * 2),
+                  padding: EdgeInsets.all(8),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(14),
                     onTap: () async {
@@ -169,19 +167,19 @@ class _EditpomodoroState extends State<Editpomodoro> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: Device.pixelRatio * 4,
+                            height: 12,
                           ),
                           Text(
                             PomodoroData.breakSet.toString(),
                             style: TextStyle(
-                                fontSize: Device.pixelRatio * 13,
+                                fontSize: 40,
                                 color: const Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: Device.menuFont),
                           ),
                           Text(
                             "POMODOROS UNTIL\nLONG BREAK",
                             style: TextStyle(
-                                fontSize: Device.pixelRatio * 4,
+                                fontSize: 12,
                                 color: const Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: Device.menuFont),
                             textAlign: TextAlign.center,
@@ -248,21 +246,21 @@ Future<void> editPomodoroTime(
                                 : null,
                             icon: Icon(
                               Icons.remove_rounded,
-                              size: Device.pixelRatio * 12,
+                              size: 30,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                           ),
                           NumberPicker(
                             selectedTextStyle: TextStyle(
-                              fontSize: Device.pixelRatio * 11,
+                              fontSize: 30,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                             textStyle: TextStyle(
-                              fontSize: Device.pixelRatio * 6,
+                              fontSize: 18,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                             itemCount: 3,
-                            itemHeight: Device.pixelRatio * 18,
+                            itemHeight: 40,
                             step: 1,
                             minValue: 1,
                             maxValue: 60,
@@ -285,7 +283,7 @@ Future<void> editPomodoroTime(
                                 : null,
                             icon: Icon(
                               Icons.add_rounded,
-                              size: Device.pixelRatio * 12,
+                              size: 30,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                           ),
@@ -302,7 +300,7 @@ Future<void> editPomodoroTime(
                         },
                         icon: Icon(
                           Icons.check_rounded,
-                          size: Device.pixelRatio * 12,
+                          size: 30,
                           color: const Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),
@@ -366,21 +364,21 @@ Future<void> editPomodoroSets(
                                 : null,
                             icon: Icon(
                               Icons.remove_rounded,
-                              size: Device.pixelRatio * 12,
+                              size: 30,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                           ),
                           NumberPicker(
                             selectedTextStyle: TextStyle(
-                              fontSize: Device.pixelRatio * 11,
+                              fontSize: 30,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                             textStyle: TextStyle(
-                              fontSize: Device.pixelRatio * 6,
+                              fontSize: 18,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                             itemCount: 3,
-                            itemHeight: Device.pixelRatio * 18,
+                            itemHeight: 40,
                             step: 1,
                             minValue: 1,
                             maxValue: 60,
@@ -403,7 +401,7 @@ Future<void> editPomodoroSets(
                                 : null,
                             icon: Icon(
                               Icons.add_rounded,
-                              size: Device.pixelRatio * 12,
+                              size: 30,
                               color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                           ),
@@ -422,7 +420,7 @@ Future<void> editPomodoroSets(
                         },
                         icon: Icon(
                           Icons.check_rounded,
-                          size: Device.pixelRatio * 12,
+                          size: 30,
                           color: const Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),

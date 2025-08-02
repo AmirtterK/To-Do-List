@@ -111,7 +111,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
                                                     .replaceAll('dotmark', '.'),
                                                 style: TextStyle(
                                                   fontSize:
-                                                      Device.pixelRatio * 6,
+                                                      18,
                                                   fontWeight: Device.menuFont,
                                                 ),
                                               ),
@@ -133,7 +133,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
                                   ),
                                   icon: Icon(
                                     Icons.add_sharp,
-                                    size: Device.pixelRatio * 10,
+                                    size: 30,
                                     color: Theme.of(context)
                                         .colorScheme
                                         .secondaryFixed,
@@ -157,7 +157,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
                                   ),
                                   icon: Icon(
                                     Icons.arrow_back_ios_rounded,
-                                    size: Device.pixelRatio * 8,
+                                    size: 32,
                                     color: Theme.of(context)
                                         .colorScheme
                                         .secondaryFixed,

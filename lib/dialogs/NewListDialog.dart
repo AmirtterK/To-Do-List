@@ -52,7 +52,7 @@ class _NewlistDialogState extends State<NewlistDialog> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsets.only(right: Device.pixelRatio*1, top: Device.pixelRatio*1),
+                        EdgeInsets.only(right: 4, top: 4),
                     child: SizedBox(
                       width: 30,
                       height: 30,
@@ -90,7 +90,7 @@ class _NewlistDialogState extends State<NewlistDialog> {
                   ),
                   isDense: true,
                   contentPadding: EdgeInsets.only(
-                      left: 20, bottom: 3, top: 0, right: Device.pixelRatio * 7),
+                      left: 20, bottom: 3, top: 0, right: 30),
                   border: InputBorder.none,
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,

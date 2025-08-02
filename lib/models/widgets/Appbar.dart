@@ -160,7 +160,7 @@ class _AppbarState extends State<Appbar> {
                               newList.ListName.replaceAll('_', ' ')
                                   .replaceAll('dotmark', '.'),
                               style: TextStyle(
-                                fontSize: Device.pixelRatio * 6,
+                                fontSize: 18,
                                 fontWeight: Device.menuFont,
                               ),
                             ),
@@ -182,7 +182,7 @@ class _AppbarState extends State<Appbar> {
                 },
                 icon: Icon(
                   Icons.add_sharp,
-                  size: Device.pixelRatio * 10,
+                  size: 32,
                   color: Theme.of(context).colorScheme.secondaryFixed,
                 ),
               )
@@ -249,7 +249,7 @@ class _AppbarState extends State<Appbar> {
                   ),
                   icon: Icon(
                     Icons.delete_sweep,
-                    size: Device.pixelRatio * 10,
+                    size: 32,
                     color: Theme.of(context).colorScheme.secondaryFixed,
                   ),
                 ),
