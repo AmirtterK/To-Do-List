@@ -207,7 +207,7 @@ class _TaskDialogState extends State<TaskDialog> {
                                   color: Theme.of(context)
                                       .colorScheme
                                       .secondaryFixed,
-                                  fontSize: 18, fontWeight: Device.menuFont
+                                  fontSize: 12, fontWeight: Device.menuFont
                                 ),
                               ),
                             ),
@@ -274,7 +274,7 @@ class _TaskDialogState extends State<TaskDialog> {
                         padding: const EdgeInsets.only(left: 4),
                         child: Builder(builder: (context) {
                           return TextButton(
-                            onPressed: () {
+                            onPressed: () { 
                               showPopover(
                                 context: context,
                                 direction: PopoverDirection.top,

@@ -42,5 +42,8 @@ Future<void> initializeWorkmanager() async {
     await Workmanager().initialize(
       callBackDispatcher,
     );
-  } catch (e) {}
+  } catch (e) {
+    // i couldn't fix the channel error so no notifications i really tried
+    // print('Workmanager initialization failed: $e');
+  }
 }

@@ -24,6 +24,9 @@ import 'package:to_do_list/pages/Pomodoro.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (!Device.desktopPlatform) {
+    await initializeWorkmanager();
+  }
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SystemChrome.setEnabledSystemUIMode(
@@ -36,10 +39,6 @@ Future<void> main() async {
     databaseFactory = databaseFactoryFfi;
     Device.menuFont = FontWeight.w300;
   }
-  if (!Device.desktopPlatform) {
-    await initializeWorkmanager();
-  }
-
 
   initializeServices();
 
@@ -81,7 +80,7 @@ Future<void> initializeServices() async {
   await setAllarm();
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatefulWidget { 
   const MyApp({super.key});
 
   @override

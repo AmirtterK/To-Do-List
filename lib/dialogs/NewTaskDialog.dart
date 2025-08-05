@@ -200,7 +200,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
                                   color: Theme.of(context)
                                       .colorScheme
                                       .secondaryFixed, fontWeight: Device.menuFont,
-                                  fontSize: 16),
+                                  fontSize: 12),
                             ),
                           ),
                         ),
